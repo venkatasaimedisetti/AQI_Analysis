@@ -1,10 +1,9 @@
 # 🌍 National Air Quality Index (AQI) Analysis Pipeline
 
-[![Streamlit App]](https://air-quality-index-by-me.streamlit.app/)
 
 A modular Python framework designed to process, analyze, and predict Air Quality Index (AQI) trends using a dataset of **235,000+ environmental records**. This project demonstrates a full-stack data engineering approach, from raw CSV ingestion to a live interactive web dashboard.
 
-[Image of a software architecture diagram showing modular components: Data Layer, Logic Layer, and Output Layer]
+
 
 ## 🔗 Live Deployment
 The application is currently live and accessible at:  
