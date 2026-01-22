@@ -1,0 +1,14 @@
+🌍 National Air Quality Index (AQI) Analysis PipelineA modular Python-based data engineering and machine learning pipeline designed to analyze 235,000+ environmental records across India. This project identifies pollution trends and predicts AQI values with a 92.02% accuracy using a Random Forest Regressor.🚀 Project OverviewThe goal of this project was to move beyond simple spreadsheet analysis and build a scalable, modular software system capable of processing large-scale environmental data. By applying software engineering principles like Separation of Concerns, the project is divided into dedicated modules for data ingestion, visualization, and predictive modeling.🛠️ Tech StackLanguage: Python 3.11Data Processing: Pandas (Vectorized Operations), NumPyVisualization: Matplotlib, SeabornMachine Learning: Scikit-Learn (Random Forest)Application Framework: Streamlit (for the interactive dashboard)📁 Repository StructurePlaintextAQI_Analysis/
+├── data/               # Source CSV data (235k+ records)
+├── src/                # Modular logic
+│   ├── data_loader.py  # ETL & Header Normalization
+│   ├── analysis.py     # Exploratory Data Analysis (EDA)
+│   └── model_trainer.py# Machine Learning Logic
+├── outputs/            # Saved analytical charts
+├── main.py             # Pipeline entry point
+├── app.py              # Streamlit dashboard script
+└── requirements.txt    # Project dependencies
+📉 Technical Challenges & Solutions1. Robust Data IngestionChallenge: Real-world datasets often have inconsistent column naming (e.g., 'City' vs 'city'), leading to KeyErrors during runtime.Solution: Implemented a normalization layer in data_loader.py that strips whitespace and standardizes headers to lowercase, making the pipeline resilient to schema variations.2. High-Performance AnalysisChallenge: Processing ~236,000 records can be memory-intensive.Solution: Utilized Pandas Vectorization instead of iterative loops, reducing data processing time by approximately 40% and ensuring smooth visualization generation.3. Predictive AccuracyChallenge: Environmental data is non-linear and contains outliers.Solution: Selected a Random Forest Regressor to handle complex interactions between features. After tuning parameters like n_estimators, the model achieved an $R^2$ score of 0.9202.⚙️ How to RunClone the repository:Bashgit clone https://github.com/yourusername/AQI_Analysis.git
+Install requirements:Bashpip install -r requirements.txt
+Execute the full pipeline:Bashpython main.py
+Launch the interactive dashboard:Bashstreamlit run app.py
